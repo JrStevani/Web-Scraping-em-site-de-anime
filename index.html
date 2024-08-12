@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Captura e Manipulação de Dados de Animes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #555;
+        }
+
+        p, ol {
+            margin-bottom: 15px;
+        }
+
+        a { 
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #555;
+
+        }
+
+        img{
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer > p {
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Captura e Manipulação de Dados de Animes</h1>
+        <p>Este projeto visa a captura de dados detalhados sobre animes e o armazenamento organizado desses dados em arquivos JSON.</p>
+    </header>
+
+    <main>
+        <section id="etapas">
+            <h2>Etapas do Projeto</h2>
+
+            <article>
+                <h3>1. Captura de URLs</h3>
+                <p><strong>Objetivo:</strong> O objetivo deste projeto é capturar URLs de animes dos gêneros "dublado" e "legendado" a partir do site animesonlinecc.to, organizando e armazenando essas URLs em arquivos JSON para facilitar futuras consultas ou análises.</p>
+                <div>
+                    <img src="imagens/Tela_inicial.PNG" alt="tela inicial do site animesonlinecc.to">
+                </div>
+                <p><strong>Descrição:</strong> O script automatiza a coleta de URLs de animes por meio do Playwright, um framework para automação de navegadores. Ele navega por todas as páginas de cada gênero especificado, extrai as URLs dos animes, e salva esses links em arquivos JSON organizados em pastas específicas para cada gênero.</p>
+                <div>
+                    <img src="imagens/tela animes.PNG" alt="imagem do site animesonlinecc.to">
+                </div>
+                <p><strong>Tecnologias:</strong></p>
+                <ul>
+                    <li><strong><a href="https://www.python.org/" target="_blank">Python</a></strong>: Linguagem principal utilizada para o desenvolvimento do script.</li>
+                    <li><strong><a href="https://playwright.dev/" target="_blank">Playwright</a></strong>: Biblioteca para automação de navegadores, usada para navegar e interagir com o site.</li>
+                    <li><strong><a href="https://www.json.org/json-en.html" target="_blank">JSON</a></strong>: Formato utilizado para armazenar os dados de URLs coletados.</li>
+                    <li><strong><a href="https://docs.python.org/3/library/os.html" target="_blank">OS</a></strong>: Biblioteca para manipulação de diretórios e arquivos no sistema operacional.</li>
+                </ul>
+                <p><strong>Resultados:</strong> O script gera pastas separadas para os gêneros "dublado" e "legendado", contendo arquivos JSON com todas as URLs dos animes disponíveis em cada gênero. Esses arquivos podem ser usados para análises posteriores ou outras aplicações relacionadas a animes.</p>
+                <div>
+                    <img src="imagens/arquivo urls de animes.PNG" alt="imagem do arquivo de texto">
+                </div>
+            </article>
+
+            <article>
+                <h3>2. Extração de Informações</h3>
+                <p><strong>Objetivo:</strong> Coletar informações detalhadas de cada anime a partir das URLs capturadas.</p>
+                <p><strong>Descrição:</strong> Para cada URL, extraímos informações como nome, descrição, gêneros, temporadas, episódios e imagem do anime.</p>
+                <div>
+                    <img src="imagens/informacoes do anime.PNG" alt="imagem con informações dos animes">
+                </div>
+                <p><strong>Tecnologias:</strong> Playwright, Python.</p>
+                <p><strong>Resultados:</strong> Dados extraídos e estruturados em um formato JSON.</p>
+                <div>
+                    <img src="imagens/informacoes do animes json.PNG" alt="imagem com os dados do anime em formato json">
+                </div>
+            </article>
+
+            <article>
+                <h3>3. Armazenamento dos Dados</h3>
+                <p><strong>Objetivo:</strong> O projeto visa garantir que todas as temporadas e episódios dos animes sejam capturados corretamente, identificando possíveis erros e registrando o progresso da captura.</p>
+                <p><strong>Descrição:</strong> Para cada episódio, o Playwright navega até a página correspondente, extraindo o link do vídeo dentro de um iframe. Se o link for capturado com sucesso, ele é armazenado no arquivo JSON do respectivo anime. Caso contrário, erros são registrados para análise posterior.</p>
+                <div>
+                    <img src="imagens/imagem com id.PNG" alt="Imagem com url do video">
+                </div>
+                <p><strong>Tecnologias:</strong> Python (manipulação de arquivos).</p>
+                <p><strong>Resultados:</strong> Dados armazenados em um formato facilmente acessível e reutilizável.</p>
+                <div>
+                    <img src="imagens/imagem resultado final.PNG" alt="Arquivo json com o resultado final">
+                </div>
+            </article>`
+        </section>
+
+        <section id="estrutura">
+            <h2>Estrutura dos Arquivos</h2>
+            <p><strong>Pasta `animes`:</strong> Contém subpastas para cada anime, com arquivos JSON contendo as informações detalhadas.</p>
+            <div>
+                <img src="imagens/extrutura de diretorios.PNG" alt="Extruturas de diretorios da pasta animes">
+            </div>
+            <p><strong>Arquivos `Etapa 1.py`, `Etapa 2.py` e `Etapa 3.py`:</strong> Conjunto de Scripts realiza todo o processo de captura e armazenamento de dados.</p>
+        </section>
+
+        <section id="como-usar">
+            <h2>Como Usar</h2>
+            <ol>
+                <li>Clone este repositório.</li>
+                <li>Instale as dependências usando <code>pip install playwright beautifulsoup4 unidecode</code>.</li>
+                <li>Instale também <code>playwright install</code>.</li>
+                <li>Execute os scripts <code>`Etapa 1.py`</code>, <code>`Etapa 2.py`</code> e <code>`Etapa 3.py`</code> para iniciar o processo de captura e armazenamento dos dados.</li>
+            </ol>
+        </section>
+
+        <section id="contribuicao">
+            <h2>Contribuições</h2>
+            <p>Contribuições são sempre bem-vindas! Se você deseja ajudar a melhorar este projeto, sinta-se à vontade para:</p>
+            <ul>
+                <li><strong>Abrir Issues:</strong> Relate problemas, sugira melhorias ou discuta novas funcionalidades que você gostaria de ver.</li>
+                <li><strong>Enviar Pull Requests:</strong> Faça alterações ou melhorias no código e submeta um pull request para revisão. Certifique-se de incluir uma descrição detalhada das mudanças.</li>
+            </ul>
+            <p>Se precisar de ajuda ou tiver alguma dúvida, não hesite em me contatar. Agradeço seu interesse e suporte!</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Jr.Stevani.</p>
+    </footer>
+</body>
+</html>
