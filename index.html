@@ -21,12 +21,12 @@
 
         h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2em;
         }
 
         main {
             padding: 20px;
-            max-width: 800px;
+            max-width: 90%;
             margin: 0 auto;
         }
 
@@ -35,11 +35,13 @@
             border-bottom: 2px solid #333;
             padding-bottom: 5px;
             margin-top: 40px;
+            font-size: 1.5em;
         }
 
         h3 {
             margin-top: 20px;
             color: #555;
+            font-size: 1.2em;
         }
 
         p, ol {
@@ -54,26 +56,65 @@
         a:hover {
             text-decoration: underline;
             color: #555;
-
         }
 
-        img{
+        img {
             border-radius: 5px;
+            max-width: 100%;
+            height: auto;
         }
 
         footer {
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 1px;
-            position: fixed;
+            padding: 10px 0;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
+
         footer > p {
-            margin: 0px;
+            margin: 0;
         }
 
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h3 {
+                font-size: 1em;
+            }
+
+            main {
+                padding: 10px;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            h3 {
+                font-size: 0.9em;
+            }
+
+            main {
+                padding: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -135,14 +176,14 @@
                 <div>
                     <img src="imagens/imagem resultado final.PNG" alt="Arquivo json com o resultado final">
                 </div>
-            </article>`
+            </article>
         </section>
 
         <section id="estrutura">
             <h2>Estrutura dos Arquivos</h2>
             <p><strong>Pasta `animes`:</strong> Contém subpastas para cada anime, com arquivos JSON contendo as informações detalhadas.</p>
             <div>
-                <img src="imagens/extrutura de diretorios.PNG" alt="Extruturas de diretorios da pasta animes">
+                <img src="imagens/extrutura de diretorios.PNG" alt="Estrutura de diretórios da pasta animes">
             </div>
             <p><strong>Arquivos `Etapa 1.py`, `Etapa 2.py` e `Etapa 3.py`:</strong> Conjunto de Scripts realiza todo o processo de captura e armazenamento de dados.</p>
         </section>
@@ -165,7 +206,6 @@
                 <li><strong>Enviar Pull Requests:</strong> Faça alterações ou melhorias no código e submeta um pull request para revisão. Certifique-se de incluir uma descrição detalhada das mudanças.</li>
             </ul>
             <p>Se precisar de ajuda ou tiver alguma dúvida, não hesite em me contatar. Agradeço seu interesse e suporte!</p>
-
         </section>
     </main>
 

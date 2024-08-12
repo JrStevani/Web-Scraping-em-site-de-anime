@@ -1,6 +1,6 @@
 # Web Scraping em site de anime
 
-<a href="https://jrstevani.github.io/Web-Scraping-em-site-de-anime/"><strong>Projeto detalhado</strong></a>
+<a href="https://jrstevani.github.io/Web-Scraping-em-site-de-anime/index.html"><strong>Projeto detalhado</strong></a>
 
 <strong>Descrição do Projeto:</strong>
 
